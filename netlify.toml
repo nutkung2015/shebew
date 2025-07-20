@@ -1,6 +1,6 @@
 [build]
-  command = "npm install && ng build --configuration production"
-  publish = "dist/shebew/browser/browser"
+  command = "npm install && npm run build"
+  publish = "dist/shebew/browser"
 
 [build.environment]
   NODE_VERSION = "18"
