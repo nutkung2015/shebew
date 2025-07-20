@@ -29,9 +29,35 @@
   to = "/index.html"
   status = 200
   force = true
+  
+[[headers]]
+  for = "/index.html"
+    [headers.values]
+    Cache-Control = "no-cache"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Content-Security-Policy = "script-src 'self' 'unsafe-eval' 'unsafe-inline' https:; object-src 'none'"
 
 [[headers]]
   for = "/*.js"
+    [headers.values]
+    Content-Type = "application/javascript"
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.mjs"
+    [headers.values]
+    Content-Type = "application/javascript"
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/assets/*.js"
+    [headers.values]
+    Content-Type = "application/javascript"
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*-*.js"
     [headers.values]
     Content-Type = "application/javascript"
     Cache-Control = "public, max-age=31536000"
