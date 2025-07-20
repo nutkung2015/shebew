@@ -28,8 +28,16 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/_redirects",
-              "src/_headers",
+              {
+                "glob": "_redirects",
+                "input": "src",
+                "output": "/"
+              },
+              {
+                "glob": "_headers",
+                "input": "src",
+                "output": "/"
+              },
               {
                 "glob": "netlify.toml",
                 "input": ".",
