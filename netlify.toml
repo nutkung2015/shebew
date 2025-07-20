@@ -1,13 +1,10 @@
 [build]
   command = "npm install && ng build --configuration production"
   publish = "dist/shebew"
+  environment = { NODE_VERSION = "18.16.0", NPM_VERSION = "9.5.1" }
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
   force = true
-
-[build.environment]
-  NODE_VERSION = "18.16.0"
-  NPM_VERSION = "9.5.1"
