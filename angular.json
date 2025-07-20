@@ -27,14 +27,7 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/_redirects",
-              "src/_headers",
-              {
-                "glob": "netlify.toml",
-                "input": ".",
-                "output": "."
-              }
+              "src/assets"
             ],
             "styles": [
               "src/styles.scss"
