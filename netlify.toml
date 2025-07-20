@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run build"
+  command = "npm install && ng build --configuration production"
   publish = "dist/shebew/browser"
 
 [build.environment]
