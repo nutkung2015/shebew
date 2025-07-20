@@ -8,21 +8,19 @@
   CI = "false"
 
 [build.processing]
-  skip_processing = false
+  skip_processing = true
 
-[build.processing.html]
-  pretty_urls = true
+[[headers]]
+  for = "/*.js"
+    [headers.values]
+    Content-Type = "application/javascript; charset=utf-8"
+    Cache-Control = "public, max-age=31536000"
 
-[build.processing.css]
-  bundle = true
-  minify = true
-
-[build.processing.js]
-  bundle = true
-  minify = true
-
-[build.processing.images]
-  compress = true
+[[headers]]
+  for = "/*-*.js"
+    [headers.values]
+    Content-Type = "application/javascript; charset=utf-8"
+    Cache-Control = "public, max-age=31536000"
 
 [[redirects]]
   from = "/*"
