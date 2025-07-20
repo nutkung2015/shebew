@@ -23,6 +23,9 @@
             "polyfills": [
               "zone.js"
             ],
+            "aot": true,
+            "optimization": true,
+            "outputHashing": "all",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
