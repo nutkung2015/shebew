@@ -1,4 +1,9 @@
+[build]
+  command = "ng build"
+  publish = "dist/shebew"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = true
