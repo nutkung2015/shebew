@@ -1,6 +1,6 @@
 [build]
   command = "npm install && npm run build"
-  publish = "dist/shebew/browser"
+  publish = "dist/shebew/browser/browser"
 
 [build.environment]
   NODE_VERSION = "18"
